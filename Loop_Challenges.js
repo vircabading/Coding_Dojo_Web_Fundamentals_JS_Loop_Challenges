@@ -45,6 +45,14 @@ function get_numbers_decreasing_order(start, end, interval) {
     return content;
 }
 
+function get_sum_of(start, end) {                       // Function to get the sum of numbers from start to end
+    var sum = 0;
+    for (idx=start; idx <= end; idx++) {
+        sum += idx;
+    }
+    return sum;
+}
+
 //// MAIN EXECUTABLE SECTION //////////////////////
 
 print_intro ("1. Print odds 1-20");                     // 1st Loop Challenge
@@ -57,4 +65,8 @@ print_ln();
 
 print_intro("3. Print the sequence");                   // 3rd loop challenge
 console.log("The numbers from 4 to -3.5 in intervals of 1.5 are: " + get_numbers_decreasing_order(4, -3.5, 1.5));
+print_ln();
+
+print_intro("4. Sigma");                                // 4th loop challenge
+console.log("The sum of the numbers from 1-100 is: " + get_sum_of(1, 100));
 print_ln();
