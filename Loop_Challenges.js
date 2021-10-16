@@ -13,7 +13,7 @@ function print_intro(description) {                     // Function to print des
     console.log("");
 }
 
-function print_ln() {                                    // Function to print an empty line 
+function print_ln() {                                   // Function to print an empty line 
     console.log("");
 }
 
@@ -53,6 +53,14 @@ function get_sum_of(start, end) {                       // Function to get the s
     return sum;
 }
 
+function get_product_from_start_to_end(start, end) {    // Function to get the product of all the numbers
+    var product = 1;                                    //     from start to end
+    for (var idx=start; idx <= end; idx++) {
+        product = product * idx;
+    }
+    return product;
+}
+
 //// MAIN EXECUTABLE SECTION //////////////////////
 
 print_intro ("1. Print odds 1-20");                     // 1st Loop Challenge
@@ -69,4 +77,8 @@ print_ln();
 
 print_intro("4. Sigma");                                // 4th loop challenge
 console.log("The sum of the numbers from 1-100 is: " + get_sum_of(1, 100));
+print_ln();
+
+print_intro("5. Factorial");                            // 5th loop challenge
+console.log("The product of all the numbers from 1-12 is: " + get_product_from_start_to_end(1, 12));
 print_ln();
